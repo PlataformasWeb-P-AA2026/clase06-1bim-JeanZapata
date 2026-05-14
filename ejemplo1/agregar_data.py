@@ -17,7 +17,6 @@ miSaludo2 = Saludo()
 miSaludo2.mensaje = "Buenas tardes"
 miSaludo2.tipo = "formal"
 
-
 # se agrega el objeto miSaludo
 # a la entidad Saludo a la sesión
 # a la espera de un commit

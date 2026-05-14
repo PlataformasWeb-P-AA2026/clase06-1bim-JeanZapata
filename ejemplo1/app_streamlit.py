@@ -8,13 +8,16 @@ Session = sessionmaker(bind=engine)
 session = Session()
 
 # Consultar docentes
+# session.query me obtiene todo lo de la clase saludo
+# saludos -> lista de objetos 
 saludos = session.query(Saludo).all()
 
 # Mostrar con Streamlit
 st.title("Presentación de todos los Saludos")
 
 for saludo  in saludos:
-    st.write(saludo)
+    cadena = f"{saludo.mensaje.upper()} {saludo.tipo.upper()}"
+    st.write(cadena)
     st.markdown("---")
 
 st.markdown("---")
